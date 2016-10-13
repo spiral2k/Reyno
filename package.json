@@ -31,5 +31,9 @@
     "gulp-strip-debug": "^1.1.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "semantic-ui": "^2.2.4"
   }
 }

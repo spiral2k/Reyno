@@ -6,47 +6,79 @@
     <title>Client Build Tool V0.0.0.0</title>
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-
-
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   </head>
 
   <body>
     <div class="container">
-      <h2>תקיית קבצי ה-Javascript</h2>
-      <input type="text" class="javascript-src-dir-input">
 
-        <button id="javascript-src-dir-trigger">בחר תקייה</button>
+      <div class="topbar">
+        <span class="top-buttons-container">
+           <button id="javascript" class="ui inverted button menu-buttons-top menu-item">Javascript</button>
+           <button id="css" class="ui inverted button menu-buttons-top menu-item">CSS</button>
+           <button id="images" class="ui inverted button menu-buttons-top menu-item">Images</button>
+        </span>
+      </div>
+
+
+
+      <div class="page home">
+        
+        Hello!
+
+      </div>
+
+      <div class="page javascript">
+
+        <h3 class="ui header">Source javascript Folder</h3>
+
+        <div class="ui input">
+              <input type="text" class="javascript-src-dir-input">
+        </div>
+
+        <button id="javascript-src-dir-trigger" class="ui blue button">Select folder</button>
+
         <input id="javascript-src-dir" type="file" style="display: none" />
         <hr>
-        <h2>תקיית היעד לקבצי ה-Javascript</h2>
-        <input type="text" class="javascript-trg-dir-input">
 
-          <button id="javascript-trg-dir-trigger">בחר תקייה</button>
-          <input id="javascript-trg-dir" type="file" style="display: none" webkitdirectory/>
-        </body>
+        <h3 class="ui header">Target javascript Folder</h3>
+
+        <div class="ui input">
+          <input type="text" class="javascript-trg-dir-input">
+        </div>
+
+        <button id="javascript-trg-dir-trigger" class="ui blue button">Select folder</button>
+
+        <input id="javascript-trg-dir" type="file" style="display: none" webkitdirectory/>
+
         <hr>
-        <button id="go">התחל</button>
+
+        <button id="go" class="ui green button">Go</button>
+      </div>
 
 
-        <div class="wrapper">    
+  
+
+
+
+        <div class="wrapper">  
+
           <div class="loader">
             <span>{</span>
             <span class="late">}</span>
           </div>     
 
           <span class="loading-text">
-    <br>
-    (אל תדאג... יום חמישי בסופו של דבר יגיע)
-
-
+            <br>
+            (Working...)
           </span> 
+
         </div>
 
         <script>
-          // You can also require other files to run in this process
           require('./renderer.js')
-          //require('./script.js')
         </script>
+
     </div>
   </body>
 </html>

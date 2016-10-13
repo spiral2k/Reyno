@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	padding:0;
-	direction: rtl;
+	text-align: left;
 }
 
 *{
@@ -11,7 +11,6 @@ body{
 .container{
 	float:left;
 	width:100%;
-	padding:20px;
 }
 
 .wrapper{
@@ -26,6 +25,46 @@ body{
 }
 
 /*rgba(70, 132, 238, 0.5)*/
+
+
+/* ------------- Sidebar --------------- */
+
+.topbar{
+	float:left;
+	width:100%;
+	height: 60px;
+	background-color: #333;
+
+}
+
+
+.top-buttons-container{
+	float: right;
+    text-align: center;
+    width: calc(100% - 100px);
+    margin-top: 12px;
+}
+
+.menu-buttons-top{
+	display: inline-block !important;
+}
+
+
+/* ------------- Pages --------------*/
+
+
+.page{
+	display: none;
+}
+
+.page.home{
+	display: block;
+}
+
+
+
+
+/* ------------- Loader --------------*/
 
 .loader {
   color: #fff;
