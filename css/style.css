@@ -1,0 +1,61 @@
+body{
+	margin:0;
+	padding:0;
+	direction: rtl;
+}
+
+*{
+	box-sizing:border-box;
+}
+
+.container{
+	float:left;
+	width:100%;
+	padding:20px;
+}
+
+.wrapper{
+	display: none;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: rgba(70, 132, 238, 1);
+	text-align: center;
+}
+
+/*rgba(70, 132, 238, 0.5)*/
+
+.loader {
+  color: #fff;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 20vh;
+  opacity: 0.8;
+}
+
+.loader span {
+	display: inline-block;
+	margin-top:20%;
+	animation: pulse 0.4s alternate infinite ease-in-out;
+}
+
+.loader span.late{
+
+	animation-delay: 0.4s;
+}
+
+.loading-text{
+  font-family: Arial;
+	color:#fff;
+	font-size:16px
+}
+
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
