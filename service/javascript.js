@@ -1,11 +1,10 @@
 const electron = require('electron');
-
 const ipc = require('electron').ipcMain;
 const dialog = require('electron').dialog;
 
-let javascript_src = javascript_trg = null, pro_send = null;;
-
-
+let javascript_src = null,
+    javascript_trg = null,
+    pro_send = null;
 
 /**/
 var gulp = require('gulp'),
@@ -18,13 +17,7 @@ var gulp = require('gulp'),
     stripDebug = require('gulp-strip-debug'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin');
-
-
 /**/
-
-
-
-
 
 
 ipc.on('javascript-src-dialog', function (event) {
@@ -62,9 +55,7 @@ ipc.on('proccess', function (event) {
     pro_send = event.sender;
 });
 
-
 /***************************************************/
-
 
 gulp.task('build-js', function () {
     //, '!Scripts/**/jquery-ui.js'
@@ -78,5 +69,4 @@ gulp.task('build-js', function () {
 
           pro_send.send('prossess-after', javascript_src, javascript_trg);
         })
-
 });

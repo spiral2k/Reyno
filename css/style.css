@@ -8,6 +8,10 @@ body{
 	box-sizing:border-box;
 }
 
+.none{
+	display:none;
+}
+
 .container{
 	float:left;
 	width:100%;
@@ -43,10 +47,6 @@ body{
     text-align: center;
     width: calc(100% - 100px);
     margin-top: 12px;
-}
-
-.menu-buttons-top{
-	display: inline-block !important;
 }
 
 

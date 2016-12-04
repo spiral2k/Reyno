@@ -3,7 +3,7 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const { session } = require('electron');
 let mainWindow;
-require('./service/javascript')
+require('./service/javascript');
 
 let defaultWindowOpts = require('electron-browser-window-options');
 var myOpts = Object.assign({}, defaultWindowOpts, {

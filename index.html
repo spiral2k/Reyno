@@ -3,10 +3,8 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Client Build Tool V0.0.0.0</title>
-
+    <title>Client Build Tool V0.0.1</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   </head>
 
   <body>
@@ -14,18 +12,14 @@
 
       <div class="topbar">
         <span class="top-buttons-container">
-           <button id="javascript" class="ui inverted button menu-buttons-top menu-item">Javascript</button>
-           <button id="css" class="ui inverted button menu-buttons-top menu-item">CSS</button>
-           <button id="images" class="ui inverted button menu-buttons-top menu-item">Images</button>
+           <button id="javascript" class="menu-item">Javascript</button>
+           <button id="css" class="menu-item">CSS</button>
+           <button id="images" class="menu-item">Images</button>
         </span>
       </div>
 
-
-
       <div class="page home">
-        
         Hello!
-
       </div>
 
       <div class="page javascript">
@@ -36,33 +30,27 @@
               <input type="text" class="javascript-src-dir-input">
         </div>
 
-        <button id="javascript-src-dir-trigger" class="ui blue button">Select folder</button>
+        <button id="javascript-src-dir-trigger">Select folder</button>
 
-        <input id="javascript-src-dir" type="file" style="display: none" />
+        <input id="javascript-src-dir none" type="file"/>
         <hr>
 
         <h3 class="ui header">Target javascript Folder</h3>
 
-        <div class="ui input">
+        <div class="">
           <input type="text" class="javascript-trg-dir-input">
         </div>
 
-        <button id="javascript-trg-dir-trigger" class="ui blue button">Select folder</button>
+        <button id="javascript-trg-dir-trigger">Select folder</button>
 
-        <input id="javascript-trg-dir" type="file" style="display: none" webkitdirectory/>
+        <input id="javascript-trg-dir none" type="file" webkitdirectory/>
 
         <hr>
 
         <button id="go" class="ui green button">Go</button>
       </div>
 
-
-  
-
-
-
-        <div class="wrapper">  
-
+        <div class="wrapper">
           <div class="loader">
             <span>{</span>
             <span class="late">}</span>
@@ -71,12 +59,11 @@
           <span class="loading-text">
             <br>
             (Working...)
-          </span> 
-
+          </span>
         </div>
 
         <script>
-          require('./renderer.js')
+          require('./renderer.js');
         </script>
 
     </div>
