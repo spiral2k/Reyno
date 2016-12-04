@@ -28,9 +28,6 @@ body{
 	text-align: center;
 }
 
-/*rgba(70, 132, 238, 0.5)*/
-
-
 /* ------------- Sidebar --------------- */
 
 .topbar{
@@ -60,8 +57,6 @@ body{
 .page.home{
 	display: block;
 }
-
-
 
 
 /* ------------- Loader --------------*/

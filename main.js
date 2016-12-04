@@ -3,6 +3,7 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const { session } = require('electron');
 let mainWindow;
+
 require('./service/javascript');
 
 let defaultWindowOpts = require('electron-browser-window-options');
@@ -35,13 +36,13 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-})
+});
 
 app.on('activate', function () {
   if (mainWindow === null) {
     createWindow()
   }
-})
+});
 
 
 

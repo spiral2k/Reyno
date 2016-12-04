@@ -2,6 +2,10 @@
 const $ = require("jquery"),
       ipc = require('electron').ipcRenderer;
 
+/* App Events */
+require('./service/events');
+
+
 document.getElementById('javascript-src-dir-trigger').addEventListener('click', () => {
   //document.getElementById('business').click();
   ipc.send('javascript-src-dialog');
@@ -19,17 +23,15 @@ document.getElementById('javascript-trg-dir-trigger').addEventListener('click', 
   ipc.send('javascript-trg-dialog')
 });
 
-ipc.on('javascript-trg-dir-acti\on', function (event, path) {
+ipc.on('javascript-trg-dir-action', function (event, path) {
   console.log(`You selected: ${path}`);
   $('.javascript-trg-dir-input').val(path);
 });
 
-document.getElementById('go').addEventListener('click', () => {
-  //document.getElementById('business').click();
+document.getElementById('go').addEventListener('click', function() {
   $('.wrapper').show();
   ipc.send('proccess');
 });
-
 
 ipc.on('prossess-after', function (event, src, trg) {
     $('.wrapper').hide();
@@ -37,32 +39,4 @@ ipc.on('prossess-after', function (event, src, trg) {
     console.log(`all good: ${src} ${trg}`);
 });
 
-
-var menuitem = document.getElementsByClassName('menu-item');
-
-var page = document.getElementsByClassName('page');
-
-
-for(var i = 0; i < menuitem.length; i++){
-    menuitem[i].addEventListener("click", menuItemClick);
-}
-
-function menuItemClick(event){
-    var id = event.target.getAttribute('id');
-    for(var i = 0; i < page.length; i++) {
-        page[i].style.display = "none";
-    }
-    var target = document.getElementsByClassName('page ' + id);
-    if(target[0])
-        target[0].style.display = "block";
-}
-
-// $('.menu-item').click(function(e){
-//
-//     var id = $(e.target).attr("id");
-//     $('.page').hide();
-//     $('.page.' + id).show();
-//
-// });
-
-
+/*-------------------------------------*/
