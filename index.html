@@ -47,10 +47,77 @@
 
         <hr>
 
-        <button id="go" class="ui green button">Go</button>
+        <button id="build-js" class="ui green button">Go</button>
       </div>
 
-        <div class="wrapper">
+
+      <div class="page css">
+
+
+        <h3 class="ui header">Source CSS Folder</h3>
+
+        <div class="ui input">
+          <input type="text" class="css-src-dir-input">
+        </div>
+
+        <button id="css-src-dir-trigger">Select folder</button>
+
+        <input id="css-src-dir none" type="file"/>
+        <hr>
+
+        <h3 class="ui header">Target CSS Folder</h3>
+
+        <div class="">
+          <input type="text" class="css-trg-dir-input">
+        </div>
+
+        <button id="css-trg-dir-trigger">Select folder</button>
+
+        <input id="css-trg-dir none" type="file" webkitdirectory/>
+
+        <hr>
+
+        <button id="build-css" class="ui green button">Go</button>
+
+
+      </div>
+
+
+
+      <div class="page images">
+
+
+        <h3 class="ui header">Source images Folder</h3>
+
+        <div class="ui input">
+          <input type="text" class="images-src-dir-input">
+        </div>
+
+        <button id="images-src-dir-trigger">Select folder</button>
+
+        <input id="images-src-dir none" type="file"/>
+        <hr>
+
+        <h3 class="ui header">Target images Folder</h3>
+
+        <div class="">
+          <input type="text" class="images-trg-dir-input">
+        </div>
+
+        <button id="images-trg-dir-trigger">Select folder</button>
+
+        <input id="images-trg-dir none" type="file" webkitdirectory/>
+
+        <hr>
+
+        <button id="build-images" class="ui green button">Go</button>
+
+
+      </div>
+
+
+
+      <div class="wrapper">
           <div class="loader">
             <span>{</span>
             <span class="late">}</span>

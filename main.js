@@ -4,7 +4,10 @@ const BrowserWindow = electron.BrowserWindow;
 const { session } = require('electron');
 let mainWindow;
 
+/* Services */
 require('./service/javascript');
+require('./service/css');
+require('./service/images');
 
 let defaultWindowOpts = require('electron-browser-window-options');
 var myOpts = Object.assign({}, defaultWindowOpts, {

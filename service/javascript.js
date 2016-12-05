@@ -13,7 +13,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     closureCompiler = require('gulp-closure-compiler'),
-    cleanCSS = require('gulp-clean-css'),
     stripDebug = require('gulp-strip-debug'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin');
@@ -48,10 +47,9 @@ ipc.on('javascript-trg-dialog', function (event) {
   });
 });
 
-ipc.on('proccess', function (event) {
+ipc.on('build-js-ipc', function (event) {
     console.log("Proccess START");
     gulp.start('build-js');
-    //event.sender.send('prossess-after', javascript_src, javascript_trg);
     pro_send = event.sender;
 });
 
