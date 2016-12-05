@@ -8,9 +8,6 @@ let images_src = null,
     images_trg = null,
     pro_send = null;
 
-
-
-
 ipc.on('images-src-dialog', function (event) {
     dialog.showOpenDialog({
         properties: ['openDirectory', 'openFile'],
@@ -40,16 +37,12 @@ ipc.on('images-trg-dialog', function (event) {
 });
 
 ipc.on('build-images-ipc', function (event) {
-    console.log("Proccess START");
     gulp.start('build-images');
     pro_send = event.sender;
 });
 
 
 gulp.task('build-images', function() {
-
-    console.log("Build images", images_src, images_trg)
-
     gulp.src(images_src + '/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest(images_trg)).on('end', function(){

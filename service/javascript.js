@@ -1,10 +1,5 @@
-const electron = require('electron');
 const ipc = require('electron').ipcMain;
 const dialog = require('electron').dialog;
-
-let javascript_src = null,
-    javascript_trg = null,
-    pro_send = null;
 
 /**/
 var gulp = require('gulp'),
@@ -17,6 +12,11 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin');
 /**/
+
+
+let javascript_src = null,
+    javascript_trg = null,
+    pro_send = null;
 
 
 ipc.on('javascript-src-dialog', function (event) {
@@ -48,7 +48,6 @@ ipc.on('javascript-trg-dialog', function (event) {
 });
 
 ipc.on('build-js-ipc', function (event) {
-    console.log("Proccess START");
     gulp.start('build-js');
     pro_send = event.sender;
 });
@@ -56,7 +55,6 @@ ipc.on('build-js-ipc', function (event) {
 /***************************************************/
 
 gulp.task('build-js', function () {
-    //, '!Scripts/**/jquery-ui.js'
     return gulp.src([javascript_src + '/**/*.js'])
         .pipe(stripDebug())
         .pipe(uglify())
@@ -64,7 +62,6 @@ gulp.task('build-js', function () {
             path.extname = ".js";
         }))
         .pipe(gulp.dest(javascript_trg)).on('end', function(){
-
           pro_send.send('prossess-after', javascript_src, javascript_trg);
         })
 });

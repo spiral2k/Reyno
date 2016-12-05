@@ -41,7 +41,6 @@ ipc.on('css-trg-dialog', function (event) {
 
 
 ipc.on('build-css-ipc', function (event) {
-    console.log("Proccess START");
     gulp.start('build-css');
     pro_send = event.sender;
 });
@@ -58,7 +57,6 @@ gulp.task('build-css', function () {
             path.extname = ".css";
         }))
         .pipe(gulp.dest(css_trg)).on('end', function(){
-
             pro_send.send('prossess-after', css_src, css_trg);
         });
 });

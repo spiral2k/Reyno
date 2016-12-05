@@ -10,9 +10,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin');
 
-
-gulp.task('default', ['build-js', 'minify-css', 'minify-images']);
-
 gulp.task('build-js', function () {
     //, '!Scripts/**/jquery-ui.js'
     return gulp.src(['Scripts/**/*.js'])
