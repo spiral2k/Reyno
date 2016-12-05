@@ -46,7 +46,7 @@ gulp.task('build-images', function() {
     gulp.src(images_src + '/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest(images_trg)).on('end', function(){
-        pro_send.send('prossess-after', images_src, images_trg);
+        pro_send.send('after-build', images_src, images_trg);
     });
 });
 

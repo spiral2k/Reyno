@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     closureCompiler = require('gulp-closure-compiler'),
     stripDebug = require('gulp-strip-debug'),
     rename = require('gulp-rename'),
-    imagemin = require('gulp-imagemin');
+    babel = require('gulp-babel');
 /**/
 
 
@@ -56,12 +56,15 @@ ipc.on('build-js-ipc', function (event) {
 
 gulp.task('build-js', function () {
     return gulp.src([javascript_src + '/**/*.js'])
+        .pipe(babel({
+            presets: ['babel-preset-es2015'].map(require.resolve)
+        }))
         .pipe(stripDebug())
         .pipe(uglify())
         .pipe(rename(function (path) {
             path.extname = ".js";
         }))
         .pipe(gulp.dest(javascript_trg)).on('end', function(){
-          pro_send.send('prossess-after', javascript_src, javascript_trg);
+          pro_send.send('after-build', javascript_src, javascript_trg)
         })
 });

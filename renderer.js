@@ -10,7 +10,7 @@ require('./client-events/images');
 
 /*-------------------------------------*/
 
-ipc.on('prossess-after', function (event, src, trg) {
+ipc.on('after-build', function (event, src, trg) {
     hideWrapper();
 });
 

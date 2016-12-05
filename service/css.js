@@ -57,6 +57,6 @@ gulp.task('build-css', function () {
             path.extname = ".css";
         }))
         .pipe(gulp.dest(css_trg)).on('end', function(){
-            pro_send.send('prossess-after', css_src, css_trg);
+            pro_send.send('after-build', css_src, css_trg);
         });
 });
