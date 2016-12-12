@@ -12,20 +12,12 @@ body{
 	display:none;
 }
 
+
+/* ------------- Global wrapper --------------- */
+
 .container{
 	float:left;
 	width:100%;
-}
-
-.wrapper{
-	display: none;
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	background: rgba(70, 132, 238, 1);
-	text-align: center;
 }
 
 /* ------------- Sidebar --------------- */
@@ -49,7 +41,6 @@ body{
 
 /* ------------- Pages --------------*/
 
-
 .page{
 	display: none;
 }
@@ -58,8 +49,18 @@ body{
 	display: block;
 }
 
-
 /* ------------- Loader --------------*/
+
+.loader-wrapper{
+	display: none;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: rgba(70, 132, 238, 1);
+	text-align: center;
+}
 
 .loader {
   color: #fff;
@@ -81,7 +82,7 @@ body{
 }
 
 .loading-text{
-  font-family: Arial;
+  	font-family: Arial;
 	color:#fff;
 	font-size:16px
 }
