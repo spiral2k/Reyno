@@ -1,10 +1,10 @@
 /* Menu navigation */
 
-var menuitem = document.getElementsByClassName('menu-item'),
+var menuevent = document.getElementsByClassName('menu-event'),
     page = document.getElementsByClassName('page');
 
-for(var i = 0; i < menuitem.length; i++){
-    menuitem[i].addEventListener("click", menuItemClick);
+for(var i = 0; i < menuevent.length; i++){
+    menuevent[i].addEventListener("click", menuItemClick);
 }
 
 function menuItemClick(event){

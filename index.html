@@ -10,105 +10,116 @@
   <body>
     <div class="container">
 
-      <div class="topbar">
+
+      <div class="topbar top">
+        <img src="./images/logo.png" id="home" class="logo menu-event">
+      </div>
+
+
+      <div class="topbar bottom">
         <span class="top-buttons-container">
-           <button id="javascript" class="menu-item">Javascript</button>
-           <button id="css" class="menu-item">CSS</button>
-           <button id="images" class="menu-item">Images</button>
+           <span id="javascript" class="menu-item menu-event">Javascript</span>
+           <span id="css" class="menu-item menu-event">CSS</span>
+           <span id="images" class="menu-item menu-event">Images</span>
         </span>
       </div>
 
-      <!-- Home Page -->
-      <div class="page home">
-        Hello!
-      </div>
 
-      <!-- Pages -->
-      <div class="page javascript">
 
-        <h3 class="ui header">Source javascript Folder</h3>
-
-        <div class="ui input">
-              <input type="text" class="javascript-src-dir-input">
+      <div class="pages-container">
+        <!-- Home Page -->
+        <div class="page home">
+          Hello!
         </div>
 
-        <button id="javascript-src-dir-trigger">Select folder</button>
+        <!-- Pages -->
+        <div class="page javascript">
 
-        <input id="javascript-src-dir none" type="file"/>
-        <hr>
+          <h3 class="ui header">Source javascript Folder</h3>
 
-        <h3 class="ui header">Target javascript Folder</h3>
+          <div class="ui input">
+                <input type="text" class="javascript-src-dir-input">
+          </div>
 
-        <div class="">
-          <input type="text" class="javascript-trg-dir-input">
+          <button id="javascript-src-dir-trigger">Select folder</button>
+
+          <input id="javascript-src-dir none" type="file"/>
+          <hr>
+
+          <h3 class="ui header">Target javascript Folder</h3>
+
+          <div class="">
+            <input type="text" class="javascript-trg-dir-input">
+          </div>
+
+          <button id="javascript-trg-dir-trigger">Select folder</button>
+
+          <input id="javascript-trg-dir none" type="file" webkitdirectory/>
+
+          <hr>
+
+          <button id="build-js" class="ui green button">Go</button>
         </div>
-
-        <button id="javascript-trg-dir-trigger">Select folder</button>
-
-        <input id="javascript-trg-dir none" type="file" webkitdirectory/>
-
-        <hr>
-
-        <button id="build-js" class="ui green button">Go</button>
-      </div>
-      <div class="page css">
+        <div class="page css">
 
 
-        <h3 class="ui header">Source CSS Folder</h3>
+          <h3 class="ui header">Source CSS Folder</h3>
 
-        <div class="ui input">
-          <input type="text" class="css-src-dir-input">
+          <div class="ui input">
+            <input type="text" class="css-src-dir-input">
+          </div>
+
+          <button id="css-src-dir-trigger">Select folder</button>
+
+          <input id="css-src-dir none" type="file"/>
+          <hr>
+
+          <h3 class="ui header">Target CSS Folder</h3>
+
+          <div class="">
+            <input type="text" class="css-trg-dir-input">
+          </div>
+
+          <button id="css-trg-dir-trigger">Select folder</button>
+
+          <input id="css-trg-dir none" type="file" webkitdirectory/>
+
+          <hr>
+
+          <button id="build-css" class="ui green button">Go</button>
+
+
         </div>
+        <div class="page images">
 
-        <button id="css-src-dir-trigger">Select folder</button>
 
-        <input id="css-src-dir none" type="file"/>
-        <hr>
+          <h3 class="ui header">Source images Folder</h3>
 
-        <h3 class="ui header">Target CSS Folder</h3>
+          <div class="ui input">
+            <input type="text" class="images-src-dir-input">
+          </div>
 
-        <div class="">
-          <input type="text" class="css-trg-dir-input">
+          <button id="images-src-dir-trigger">Select folder</button>
+
+          <input id="images-src-dir none" type="file"/>
+          <hr>
+
+          <h3 class="ui header">Target images Folder</h3>
+
+          <div class="">
+            <input type="text" class="images-trg-dir-input">
+          </div>
+
+          <button id="images-trg-dir-trigger">Select folder</button>
+
+          <input id="images-trg-dir none" type="file" webkitdirectory/>
+
+          <hr>
+
+          <button id="build-images" class="ui green button">Go</button>
+
+
         </div>
-
-        <button id="css-trg-dir-trigger">Select folder</button>
-
-        <input id="css-trg-dir none" type="file" webkitdirectory/>
-
-        <hr>
-
-        <button id="build-css" class="ui green button">Go</button>
-
-
-      </div>
-      <div class="page images">
-
-
-        <h3 class="ui header">Source images Folder</h3>
-
-        <div class="ui input">
-          <input type="text" class="images-src-dir-input">
-        </div>
-
-        <button id="images-src-dir-trigger">Select folder</button>
-
-        <input id="images-src-dir none" type="file"/>
-        <hr>
-
-        <h3 class="ui header">Target images Folder</h3>
-
-        <div class="">
-          <input type="text" class="images-trg-dir-input">
-        </div>
-
-        <button id="images-trg-dir-trigger">Select folder</button>
-
-        <input id="images-trg-dir none" type="file" webkitdirectory/>
-
-        <hr>
-
-        <button id="build-images" class="ui green button">Go</button>
-
 
       </div>
 

@@ -35,6 +35,7 @@
     "gulp-util": "^3.0.7"
   },
   "dependencies": {
-    "electron-browser-window-options": "^1.0.3"
+    "electron-browser-window-options": "^1.0.3",
+    "gulp-watch": "^4.3.11"
   }
 }
