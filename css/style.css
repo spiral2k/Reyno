@@ -2,13 +2,13 @@ body{
 	margin:0;
 	padding:0;
 	text-align: left;
-	outline:none;
 	background: #edf2f6;
 	font-family: 'Cabin Condensed', sans-serif;
 }
 
 *{
 	box-sizing:border-box;
+	outline:none;
 }
 
 input[type="file"]{
@@ -25,6 +25,7 @@ input[type="file"]{
 	float:left;
 	width:100%;
 }
+
 
 /* ------------- Topbar / Sidebar --------------- */
 
@@ -91,6 +92,28 @@ input[type="file"]{
 .page.home{
 	display: block;
 }
+
+
+
+/* ------------- Buttons --------------*/
+
+.button{
+	border:0;
+	background: #FF3C80;
+	padding:7px 10px;
+	color:#fff;
+}
+
+/* ------------- Inputs --------------*/
+
+
+.input{
+	height:27px;
+	border:1px solid #FF3C80;
+	width:300px;
+}
+
+
 
 /* ------------- Loader --------------*/
 
