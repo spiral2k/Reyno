@@ -4,13 +4,14 @@ body{
 	text-align: left;
 	outline:none;
 	background: #edf2f6;
+	font-family: 'Cabin Condensed', sans-serif;
 }
 
 *{
 	box-sizing:border-box;
 }
 
-.none{
+input[type="file"]{
 	display:none;
 }
 
@@ -62,14 +63,13 @@ body{
 
 
 .menu-item{
-	border-bottom:1px solid #fff;
-	background: transparent;
+	background: #48556a;
 	color:#fff;
-	padding:7px 10px;
+	padding: 9px;
 }
 
 .menu-item:hover{
-	border-top:1px solid #fff;
+	background: #515c6e;
 	cursor:pointer;
 }
 
@@ -107,7 +107,6 @@ body{
 
 .loader {
   color: #fff;
-  font-family: Consolas, Menlo, Monaco, monospace;
   font-weight: bold;
   font-size: 20vh;
   opacity: 0.8;
@@ -125,7 +124,6 @@ body{
 }
 
 .loading-text{
-  	font-family: Arial;
 	color:#fff;
 	font-size:16px
 }
